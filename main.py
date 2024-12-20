@@ -37,3 +37,8 @@ def Add_Card(data: Dict[Any, Any]):
     data = dict(data)
     data = databassconnection.data_store(data)
     return "successfully data stored"
+
+@app.get("/data_aess")
+def data_aess():
+    data = databassconnection.data_retrive()
+    return data
