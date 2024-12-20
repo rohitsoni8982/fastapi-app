@@ -28,6 +28,9 @@ class Add_Card(BaseModel):
     country : str
     phone : str
 
+@app.get("/your-endpoint")
+async def your_get_method():
+    return {"message": "This is a GET response"}
 
 @app.post("/add_card")
 def Add_Card(data: Dict[Any, Any]):
